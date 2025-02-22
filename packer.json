@@ -13,7 +13,7 @@
       {
         "type": "shell",
         "inline": [
-          "sudo cp /target/artefacto.war /usr/share/tomcat/webapps/",
+          "sudo cp target/artefacto.war /usr/share/tomcat/webapps/",
           "sudo systemctl restart tomcat"
         ]
       }
