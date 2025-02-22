@@ -10,12 +10,17 @@
       }
     ],
     "provisioners": [
-      {
-        "type": "shell",
-        "inline": [
-          "sudo cp target/artefacto.war /usr/share/tomcat/webapps/",
-          "sudo systemctl restart tomcat"
-        ]
-      }
+        {
+            "type": "file",
+            "source": "target/artefacto.war",
+            "destination": "tmp/artefacto.war"
+          },
+        {
+            "type": "shell",
+            "inline": [
+            "sudo cp tmp/artefacto.war /usr/share/tomcat/webapps/",
+            "sudo systemctl restart tomcat"
+            ]
+        }
     ]
   }
