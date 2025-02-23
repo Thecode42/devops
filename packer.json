@@ -23,5 +23,11 @@
             "sudo systemctl restart tomcat"
             ]
         }
+    ],
+    "post-processors": [
+        {
+        "type": "manifest",
+        "output": "manifest.json"
+        }
     ]
   }
